@@ -17,7 +17,7 @@ app.use(express.json());
 
 const io = new Server(server, {
     cors: {
-        origin: process.env.ANGULAR_APP_URL || 'http://localhost:4200',
+        origin: process.env.ANGULAR_APP_URL,
         methods: ['GET', 'POST']
     }
 })
@@ -25,7 +25,7 @@ const io = new Server(server, {
 io.on('connection', (socket) => {
     console.log(`A user connected: ${socket.id}`);
     socket.on('sendMessage', async (message) => {
-        const {username, content} = DataTransfer;
+        const {username, content} = message;
         if (!username || !content){
             console.warn('received invalid message:', message);
             return;
@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
         try {
             const newMessage = new Message({ username, content});
             await newMessage.save();
-            io.emit('message', newMessage);
+            io.emit('newMessage', newMessage);
             console.log(`Message saved and broadcasted: ${username}: ${content}`);
         } catch (err) {
             console.error('Error saving or broadcasting message:', err);
@@ -59,13 +59,12 @@ async function run() {
 }
 
 
-
 app.get('/', (req, res) =>{
     res.send('Hello from the server!');
 })
 
 //fetching messages
-app.get('api/messages', async (req, resp) => {
+app.get('/api/messages', async (req, resp) => {
     try {
         const messages = await Message.find().sort({ timestamp : 1});
         resp.json(messages)
