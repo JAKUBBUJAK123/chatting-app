@@ -5,7 +5,7 @@ The backend is hosted on [Render](https://render.com/), the frontend is deployed
 
 ## 🚀 Live Demo
 
-👉 [Check out the app on Netlify!](simple-chatting.netlify.app)
+👉 [Check out the app on Netlify!](https://simple-chatting.netlify.app)
 
 ---
 
