@@ -39,3 +39,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+app/app/.angular/cache/19.2.15/app/angular-compiler.db
+app/app/.angular/cache/19.2.15/app/angular-compiler.db-lock
+app/app/dist/
+app/app/.angular/cache/19.2.15/app/.tsbuildinfo
+
