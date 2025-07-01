@@ -1,4 +1,35 @@
-# App
+# Chatting App
+
+A real-time chat application built with Angular (frontend), Node.js/Express (backend), and MongoDB (database).  
+The backend is hosted on [Render](https://render.com/), the frontend is deployed on [Netlify](https://www.netlify.com/), and the database is managed with MongoDB Atlas.
+
+## 🚀 Live Demo
+
+👉 [Check out the app on Netlify!](simple-chatting.netlify.app)
+
+---
+
+## Features
+
+- Real-time messaging with Socket.IO
+- Modern Angular frontend
+- Node.js/Express backend API
+- MongoDB Atlas for persistent message storage
+- Responsive and clean UI
+- Deployed frontend on Netlify
+- Deployed backend on Render
+
+---
+
+## Tech Stack
+
+- **Frontend:** Angular, RxJS, ngx-socket-io
+- **Backend:** Node.js, Express, Socket.IO
+- **Database:** MongoDB Atlas
+- **Hosting:**  
+  - Frontend: Netlify  
+  - Backend: Render
+
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
 
