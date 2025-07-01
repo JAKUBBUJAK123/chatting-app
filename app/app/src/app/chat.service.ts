@@ -14,7 +14,7 @@ export interface Message {
   providedIn: 'root'
 })
 export class ChatService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'https://chatting-app-av09.onrender.com/api';
   constructor(private socket : Socket , private http: HttpClient) { }
 
   sendMessage(username: string, content: string): void {
