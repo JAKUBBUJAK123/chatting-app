@@ -9,7 +9,7 @@ import { ChatService, Message } from './chat.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit, OnDestroy{
-  title = 'app';
+  title = 'chatting app';
   username: string = "Ziom";
   messageContent: string = '';
   messages: Message[] = [];
